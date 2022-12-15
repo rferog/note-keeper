@@ -1,0 +1,15 @@
+<form [formGroup]="createNoteForm" (ngSubmit)="onSubmit()" class="create-note">
+  <textarea autocomplete="off" class="create-note-title" type="text" id="title" formControlName="title"
+    placeholder="Title"></textarea>
+  <textarea class="create-note-content" type="text" id="content" formControlName="content"
+    placeholder="Write a note..."></textarea>
+  <button *ngIf="!updating else update" class="create-note-button" type="submit">Create</button>
+  <ng-template #update>
+    <div class="row">
+      <button mat-dialog-close class="create-note-button" type="submit">Update</button>
+      <div (click)="deleteNote()" mat-dialog-close class="delete-button" type="submit">
+        <img src="assets/img/delete.svg" alt="Delete">
+      </div>
+    </div>
+  </ng-template>
+</form>

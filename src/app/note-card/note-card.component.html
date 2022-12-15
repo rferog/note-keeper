@@ -1,0 +1,15 @@
+<div class="notes">
+  <div
+    (click)="openDialog(note.key, note.value)"
+    class="note" *ngFor="let note of notes | keyvalue"
+  >
+    <img src="/assets/img/edit-icon.svg" alt="edit" width="24" height="24">
+    <div *ngIf="note.value.title || note.value.content else empty">
+      <h1>{{ note.value.title }}</h1>
+      <pre>{{ note.value.content }}</pre>
+    </div>
+    <ng-template #empty>
+      <div class="empty">This note is empty</div>
+    </ng-template>
+  </div>
+</div>

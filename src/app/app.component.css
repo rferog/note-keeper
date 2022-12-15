@@ -1,0 +1,38 @@
+.app-container {
+    padding: 50px 100px;
+}
+
+@media screen and (max-width: 850px) {
+    .app-container {
+        padding:50px
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .app-container {
+        padding:30px
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .app-container {
+        padding:20px
+    }
+}
+
+.theme-toggle {
+    background-color: var(--theme-toggle-color);
+    position: fixed;
+    right: 30px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    bottom: 30px;
+    z-index: 1000;
+  }
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color);
+}

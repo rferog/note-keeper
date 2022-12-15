@@ -1,0 +1,36 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.cdk-overlay-dark-backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.mat-dialog-container {
+    padding: 0px!important;
+    border-radius: 8px!important;
+    background-color: var(--bg-color);
+}
+
+:root {
+    --text-color: rgb(0, 0, 0);
+    --empty-text-color: rgba(0,0,0,.5);
+    --bg-color: rgb(255, 255, 255);
+    --border-color: rgb(218, 220, 224);
+    --form-border-color: rgb(255, 255, 255);
+    --theme-toggle-color: rgb(30, 30, 30);
+}
+
+[data-theme="dark"] {
+    --text-color: rgb(255, 255, 255);
+    --empty-text-color: rgb(137, 137, 137);
+    --bg-color: rgb(18, 18, 18);
+    --border-color: rgb(52, 53, 57);
+    --form-border-color: rgb(18, 18, 18);
+    --theme-toggle-color: rgb(240, 240, 240);
+}

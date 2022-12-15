@@ -1,0 +1,14 @@
+<div class="app-container">
+  <h1 class="title">NOTE KEEPER APP</h1>
+  <img
+    *ngIf="!darkMode else dark"
+    class="theme-toggle"
+    (click)="toggleTheme()"
+    src="/assets/img/moon.svg"
+  >
+  <ng-template #dark>
+    <img class="theme-toggle" (click)="toggleTheme()" src="/assets/img/sun.svg">
+  </ng-template>
+  <app-create-note></app-create-note>
+  <app-note-card [notes]="notes"></app-note-card>
+</div>
